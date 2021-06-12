@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- We want to activate pay and sign by default for easier demoing. -->
+        <record id="sale.message_sale_1" model="mail.message">
+            <field name="body">سلام،
+                سوالی در مورد قیمت‌گذاری خدمات دارم: من در مورد امکان تخفیف برای خدمات بیش‌تر از 25 ساعت شنیده‌ام.
+                آیا مورد تایید شماست؟
+            </field>
+        </record>
+
+        <record id="sale.message_sale_2" model="mail.message">
+            <field name="body">سلام،
+                متأسفانه این تخفیف موقتی بود که دیگر در دسترس نیست.
+                آیا هنوز هم قصد دارید سفارش را بر اساس قیمت های ذکر شده تأیید کنید؟
+                با تشکر!
+            </field>
+        </record>
+
+        <record id="sale.message_sale_3" model="mail.message">
+            <field name="body">ممنون برای توضیحات. به محض دریافت تأیید مدیریت، سفارش را نهایی می‌کنم.</field>
+        </record>
+        <!-- sale advance demo.. -->
+
+
+        <!-- Activities of sales order -->
+        <record id="sale.sale_activity_2" model="mail.activity">
+            <field name="summary">پاسخ به سوالات</field>
+        </record>
+
+        <record id="sale.sale_activity_6" model="mail.activity">
+            <field name="summary">بررسی شرایط تحویل</field>
+        </record>
+        <record id="sale.sale_activity_7" model="mail.activity">
+            <field name="summary">تایید تحویل</field>
+        </record>
+        <record id="sale.sale_activity_10" model="mail.activity">
+            <field name="summary">دریافت تایید پیشنهاد قیمت</field>
+        </record>
+
+    </data>
+</odoo>
