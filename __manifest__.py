@@ -1,14 +1,14 @@
 {
     'name': 'Sale Core',
-    'version': '14.0.0.1.0.0+210609',
+    'version': '14.0.0.1.1.0+210613',
     'description': """
-    This module converts original sale demo and data records into Farsi.
+     This module modifies some properties of Sale, including:
+    - Converts original CRM demo and data records into Farsi.
     """,
     'author': "Kenevist Developers, Maryam Kia",
     'website': "https://www.kenevist.ir",
     'license': 'OPL-1',
     'category': 'Localization',
-
     'depends': ['sale'],
     'data': [
         'data/ir_sequence_data.xml',
