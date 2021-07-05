@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saleorder_document"
+              inherit_id="sale.report_saleorder_document">
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="t-options">{"widget": "monetary"}</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_saleorder_document_inherit_sale_management"
+              inherit_id="sale_management.report_saleorder_document_inherit_sale_management">
+        <xpath expr="//th[@name='th_option_name']" position="after">
+            <th name="th_option_unit" class="text-left">Unit</th>
+        </xpath>
+        <xpath expr="//td[@name='td_option_name']" position="after">
+            <td name="td_option_unit">
+                <strong class="text-right">
+                    <span t-field="option.uom_id.name"/>
+                </strong>
+            </td>
+        </xpath>
+    </template>
+
+    <template id="sale_order_portal_content_inherit_sale_management"
+              inherit_id="sale_management.sale_order_portal_content_inherit_sale_management">
+        <xpath expr="//section[@id='signature']/following-sibling::t/section/table/thead/tr/th[1]" position="after">
+            <th name="th_option_unit" class="text-left">Unit</th>
+        </xpath>
+        <xpath expr="//section[@id='signature']/following-sibling::t/section/table/tbody/tr/t/td[1]" position="after">
+            <td name="td_option_unit">
+                <strong class="text-right">
+                    <span t-field="option.uom_id.name"/>
+                </strong>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>
